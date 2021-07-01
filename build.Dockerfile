@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.14.0
 
 RUN echo '@edge https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories && \
     apk update && apk upgrade && \
