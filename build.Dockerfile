@@ -1,0 +1,10 @@
+FROM alpine:3.13
+
+RUN echo '@edge https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories && \
+    apk update && apk upgrade && \
+    apk add --no-cache ca-certificates tor@edge
+
+EXPOSE 9001
+USER tor
+
+ENTRYPOINT ["tor"]
