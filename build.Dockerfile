@@ -1,8 +1,7 @@
 FROM alpine:3.14.0
 
-RUN echo '@edge https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories && \
-    apk update && \
-    apk add --no-cache ca-certificates tor@edge
+RUN apk update && apk upgrade && \
+    apk add --no-cache ca-certificates tor
 
 EXPOSE 9001
 USER tor
