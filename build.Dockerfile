@@ -1,7 +1,8 @@
 FROM alpine:3.14.1
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache ca-certificates tor
+RUN apk --update --no-cache add \
+    ca-certificates \
+    tor
 
 EXPOSE 9001
 USER tor
