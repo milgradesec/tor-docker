@@ -19,4 +19,5 @@ jobs:
 
       - name: Build and Push
         run: |
+          docker run --rm --privileged linuxkit/binfmt:v0.8
           docker buildx build -f build.Dockerfile --platform linux/arm64 . --tag ghcr.io/milgradesec/tor:latest --push
