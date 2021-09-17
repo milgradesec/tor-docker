@@ -1,6 +1,6 @@
 FROM alpine:3.14.2
 
-ARG TOR_VERSION=0.4.5.10
+ARG TOR_VERSION
 
 RUN apk update && \
     apk add --no-cache ca-certificates \
