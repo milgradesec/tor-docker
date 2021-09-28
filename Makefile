@@ -1,4 +1,4 @@
-VERSION:=0.4.5.10
+VERSION:=0.4.6.7
 
 all: 
 	docker buildx build . -f build.Dockerfile \
